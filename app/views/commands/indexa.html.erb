@@ -1,0 +1,32 @@
+<div id="command_list" >
+<h1>Listing command</h1>
+<table>
+<% @commands.each do |command| %>
+  <tr>
+    <td><%= command.name %></td></tr>
+	<tr>
+    <td><%= command.command %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= form_for :command, :url => {:action => :index} do |f| %>
+<div class="field">
+    <%= f.label :person_name %><br />
+    <%= f.text_field :person_name %>
+  </div>
+  <div class="field">
+    <%= f.label :command %><br />
+    <%= f.text_area :command, :rows => 5 %>
+  </div>
+<div class="actions">
+    <%= f.submit %>
+<% end %>
+
+  
+  <a href="/commands/">Back</a>
+  
+  
+  
+  

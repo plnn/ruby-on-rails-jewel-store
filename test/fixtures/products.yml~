@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  type_of_jewelry: MyString
+  image_url: MyString
+  price: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  type_of_jewelry: MyString
+  image_url: MyString
+  price: 9.99
+#START:neck
+
+neck: 
+  name:       Bead Crochet Necklace
+  description: 
+    Necklace made from crochet lace, pearls, and sterling silver. Crochet worked in ecru no. 10 mercerized cotton thread. Silver wire in 16 gauge (clasp) and 26 gauge. Freshwater pearls in disc shape (green) and seed shape (green, brown, and champagne). Original design
+  type_of_jewelry : Necklace
+  price:       49.50
+  image_url:   Sea_necklace.png 
+#END:neck
+

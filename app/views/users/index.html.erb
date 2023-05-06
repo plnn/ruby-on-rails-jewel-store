@@ -1,0 +1,33 @@
+<h1>Listing users</h1>
+  <% if notice %>
+  <p id="notice"><%= notice %></p>
+  <% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+<td><%= button_to 'Destroy', user, method: :delete, :onclick => "return confirm('Are you sure you want to delete this user?')" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+</br></br>
+<%= link_to 'New User', new_user_path %>
+&nbsp;&nbsp;&nbsp;
+<%= link_to 'New Product' , new_product_path %>
+&nbsp;&nbsp;&nbsp;
+<%= link_to 'Commands' , commands_path %>
+&nbsp;&nbsp;&nbsp;
+<%= link_to 'line items' , line_items_path %>
+ <a href="/">Back</a>

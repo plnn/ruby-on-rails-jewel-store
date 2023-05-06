@@ -1,0 +1,12 @@
+<h1>Commands#create</h1>
+<p>Find me in app/views/commands/create.html.erb</p>
+<div id="command_list" >
+<h1>Listing command</h1>
+<table>
+<% @command.each do |command| %>
+  <tr>
+    <td><%= command.name %></td></tr>
+	<tr>
+    <td><%= command.command %></td>
+  </tr>
+<% end %>

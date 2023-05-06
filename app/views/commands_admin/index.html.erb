@@ -1,0 +1,33 @@
+<!--<h1>Listing commands</h1>-->
+
+<div id="command_list" >
+<h1><strong>Listing commands</strong></h1>
+<br/><br/>
+
+
+
+<% @commands.each do |command| %>
+
+<div class= "a">
+<center>
+<table>
+
+<tr><td><strong>User</strong></td>
+<td><strong>Product Name</strong></td>
+<td><strong>Command</strong></td></tr>
+
+
+<tr>
+<td bgcolor="#B0C4DE"><%= command.person_name %></td>
+<td bgcolor="#FFFFCC"><%= command.product_name %></td>
+<td bgcolor="#FFCCFF"><%= command.command %></td></tr>
+
+</table>
+</center>
+</div>
+<% end %>
+
+</div>
+<br />
+<%= link_to 'New command', new_command_path %>
+<a href="/userproducts">Back</a>

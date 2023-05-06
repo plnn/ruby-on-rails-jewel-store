@@ -1,0 +1,29 @@
+<!--<h1>Listing products</h1>-->
+
+<div id="product_list" >
+<h1>Listing products</h1>
+<table>
+<% @userproducts.each do |product| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+<td>
+<%= image_tag(product.image_url, :class => 'list_image') %>
+</td>
+<td class="list_description" >
+<dl>
+<dt><%= product.name %></dt>
+<dd><%= truncate(strip_tags(product.description),
+:length => 80) %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+<%= link_to 'Show', product %><br/>
+<a href="/commands_admin/" >Commands</a><br />
+
+
+</td>
+</tr>
+<% end %>
+</table>
+</div>
+<br />
+<a href="/">Back</a>
